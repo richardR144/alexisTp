@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Animator{% endblock %}
+
+{% block body %}
+    <h1>Edit Animator</h1>
+
+    {{ include('animator/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('app_animator_index') }}">back to list</a>
+
+    {{ include('animator/_delete_form.html.twig') }}
+{% endblock %}

@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Animator index{% endblock %}
+
+{% block body %}
+    <h1>Animator index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Lastname</th>
+                <th>Firstname</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for animator in animators %}
+            <tr>
+                <td>{{ animator.id }}</td>
+                <td>{{ animator.lastname }}</td>
+                <td>{{ animator.firstname }}</td>
+                <td>{{ animator.phone }}</td>
+                <td>{{ animator.email }}</td>
+                <td>
+                    <a href="{{ path('app_animator_show', {'id': animator.id}) }}">show</a>
+                    <a href="{{ path('app_animator_edit', {'id': animator.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_animator_new') }}">Create new</a>
+{% endblock %}

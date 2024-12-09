@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modèle d'email </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: darkgrey;
+        }
+        .email-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background: darksalmon;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .email-header {
+            text-align: center;
+            background-color: skyblue;
+            color: black;
+            padding: 10px 0;
+            border-radius: 8px 8px 0 0;
+        }
+        .email-body {
+            padding: 20px;
+            color: black;
+            line-height: 1.6;
+        }
+        .email-footer {
+            text-align: center;
+            font-size: 15px;
+            color: white;
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            background-color: olivedrab;
+            color: red;
+            text-decoration: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            margin: 10px 0;
+        }
+        .button:hover {
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+<div class="email-container">
+    <div class="email-header">
+        <h1>Nom de votre entreprise</h1>
+    </div>
+    <div class="email-body">
+        <p>Bonjour {{ contact.name }} ({{ contact.email }}),</p>
+        <p>Votre message : {{ contact.description }}</p>
+        <a href="[Votre Lien Ici]" class="button">Cliquez ici</a>
+    </div>
+    <div class="email-footer">
+        <p>&copy; 2024 nom de l'entreprise. Tous droits réservés.</p>
+        <p><a href="[Lien désabonnement]">Se désabonner</a></p>
+    </div>
+</div>
+</body>
+</html>

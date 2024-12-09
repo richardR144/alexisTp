@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Animator{% endblock %}
+
+{% block body %}
+    <h1>Create new Animator</h1>
+
+    {{ include('animator/_form.html.twig') }}
+
+    <a href="{{ path('app_animator_index') }}">back to list</a>
+{% endblock %}

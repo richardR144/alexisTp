@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+/* public/css/custom.css */
+body {
+    background-color: #f8f9fa;
+}
+
+.container-wrapper {
+    color: #333;
+    font-size: 18px;
+}

@@ -1,0 +1,25 @@
+{# templates/establishment/show.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Détails de l'Établissement{% endblock %}
+
+{% block body %}
+    <div class="container-wrapper">
+        <h1>Détails de l'Établissement</h1>
+
+        <div class="container">
+            <div class="container-header">
+                <h2>{{ establishment.name }}</h2>
+            </div>
+            <div class="container-body">
+                <p><strong>Adresse :</strong> {{ establishment.adress }}</p>
+                <p><strong>Description :</strong> {{ establishment.description }}</p>
+            </div>
+        </div>
+
+        <a href="{{ path('app_establishment_index') }}" class="btn btn-primary">Retour à la liste</a>
+        <a href="{{ path('establishment_edit', {'id': establishment.id}) }}" class="btn btn-warning">Modifier</a>
+
+        {{ include('establishment/_delete_form.html.twig') }}
+    </div>
+{% endblock %}

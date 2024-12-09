@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ContactController{% endblock %}
+
+{% block body %}
+    <div class="container mt-5">
+        <div class="d-flex justify-content-center">
+            <div class="w-50">
+                {{ form_start(formView, {'attr': {'class': 'needs-validation'}}) }}
+
+                {{ form_widget(formView, {'attr': {'class': 'form-control'}}) }}
+
+                {{ form_end(formView) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
